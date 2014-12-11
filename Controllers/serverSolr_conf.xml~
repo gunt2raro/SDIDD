@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<configuration>
+        <connection>
+                <url>http://localhost:8983/solr/</url>
+        </connection>
+</configuration>

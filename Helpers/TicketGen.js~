@@ -1,0 +1,19 @@
+
+
+function mk_ticket( arr, i ){
+
+    var genResult = "";
+
+    genResult += arr[i]['userid'];
+    genResult += arr[i]['username'];
+    genResult += arr[i]['edificio'];
+    genResult += arr[i]['area'];
+    genResult += arr[i]['ticket'];
+    genResult += arr[i]['descripcion'];
+    genResult += arr[i]['solucion'];
+    genResult += arr[i]['tiempo_sol'];
+    genResult += arr[i]['realizo'];
+    genResult += arr[i]['date'];
+    genResult += arr[i]['comentarios'];
+
+}

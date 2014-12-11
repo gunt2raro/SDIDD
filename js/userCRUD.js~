@@ -1,0 +1,74 @@
+//Variables
+var tbUser;
+
+//Get all the users
+function read_users(){
+
+    tbUser = $( '#tbUser' ).dataTable({
+        'ajax' : 'http://localhost/Index_system/Services/UserWS.php?action=getAll'
+    });
+
+    $('#tbUser tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            tbUser.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+
+}//End of read_productos function
+
+//Add new user
+function add_user(){
+
+    var username = $( '#txtUsername' ).val();
+    var password = $( '#txtPassword' ).val();
+    var repassword = $( '#txtRePassword' ).val();
+    var last = $( '#txtLastName' ).val();
+    var name = $( '#txtName' ).val();
+    var perid = $( '#txtPermission' ).find( ':selected' ).attr( 'id' );
+
+    if(password != repassword){
+
+	alert( "Contraseñas no coinciden.");
+	return 0;
+
+
+    }else if( username == "" || password == "" || perid == "permission" ){
+    	alert( "Los campos especificados no pueden estar vacios." );
+	return 0;
+    }else{
+
+	    $.ajax({
+		'dataType' : 'json',
+		'type' : 'POST',
+		'url' : 'http://localhost/Index_system/Services/UserWS.php',
+		'data' : { 'action' : 'Add', 'username' : username, 'password' : password, 'permissionid' : perid, 'name' : name, 'last' : last },
+		success : function( data){
+
+		    if( data == "success" ){
+
+			alert( "Producto Guardado Exitosamente." );
+
+			$( '#perfil_de_usuario' ).hide();
+			$( '#control_de_usuarios' ).show();
+			$( '#index_doc' ).hide();
+			$( '#busqueda' ).hide();
+			$( '#historial' ).hide();
+			$( '#estadisticas' ).hide();
+			$( '#configuracion' ).hide();
+			$( '#addUserForm' ).hide();
+
+		    } else {
+			alert( "No se pudo guardar el Usuario." );
+		    }
+
+		    $( '#addUserForm input[type="text"]' ).val('');
+
+		}//fin de success function
+	    });
+    }
+
+}//End of add_producto function 

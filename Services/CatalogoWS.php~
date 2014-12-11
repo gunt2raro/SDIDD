@@ -1,0 +1,7 @@
+<?php
+
+
+	require_once( $_SERVER['DOCUMENT_ROOT'].'/Index_system/Helpers/TextHelper.php' );
+
+	print( TextHelper::add_hashtags( "Ramiro123 asdfasdfasdfasdf haha cañón" ) );
+?>

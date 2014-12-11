@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<connection_solr>
+		<server>localhost</server>
+		<username>admin</username>
+		<password>changeit</password>
+		<port>8983</port>
+	</connection_solr>
+	<prefs>
+		<tickets_manual>Off</tickets_manual>
+	</prefs>
+</configuration>
