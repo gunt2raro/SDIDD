@@ -42,8 +42,8 @@ function buttonsInit(){
     $( '#bConfiguracion' ).click( bConfiguracion_action );
 
     $( '#bAdd_doc' ).click( bAdd_doc_action );
-    $( '#bAdd_cat' ).click( bPerfil_action );
-    $( '#bPerfil_header' ).click( bIndex_doc_action );
+    $( '#bAdd_cat' ).click( bAdd_catalogo_action );
+    $( '#bPerfil_header' ).click( bPerfil_action );
     $( '#bIndex_doc_header' ).click( bIndex_doc_action );
     $( '#bBusqueda_header' ).click( bBusqueda_action );
     $( '#bStats_header' ).click( bEstadisticas_action );

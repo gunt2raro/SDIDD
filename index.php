@@ -219,6 +219,7 @@
 
 
                         </div>
+
 			<!------------------Ventana nuevo usuario------------->
 			<div id="addUserForm" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<div class="col-md-5">
@@ -351,13 +352,15 @@
 			<!---------Estadisticas---------->
                         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" id="estadisticas">
 
-			     <h1 class="page-header">Estadisticas</h1>
+			     <h1 class="page-header">Estadísticas</h1>
 
 			     <div class="row">
 			     	  <div class="col-md-6"></div>
+
 				  <div class="col-md-4">
 				      <input id="txtBuscarEst" type="text" name="txtBuscar" class="form-control" placeholder="Buscar"/>
 				  </div>
+
 				  <div class="col-md-2">
 					<button class="btn btn-info" id="bBuscarEst"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 			          	<button class="btn btn-info" id="bBuscarEst"><span class="glyphicon glyphicon-download" aria-hidden="true"></span></button>
@@ -529,24 +532,21 @@
 				</div>
 
 				<div class="col-md-7 resultBox" style="margin-left:50px">
-					  <!----
-					  <br />
 
-					  <p>
-		                                <strong>Tickets manual:  </strong> <input type="checkbox" id="cbTickets" name="my-checkbox" checked>
-		                          </p>
-
-					  <br />--->
 					<h3>Agregar nuevo campo de excel</h3>
+
 					<p>
 		                                <strong>Descripción:  </strong> <input id="txtDescription" type="text" name="port" class="form-control" placeholder="descripción"/>
 		                        </p>
+
 					<p>
 		                                <strong>Tipo de Dato:  </strong> <input id="txtDataType" type="text" name="port" class="form-control" placeholder="tipo"/>
 		                        </p>
+
 					<p>
 		                                <button id="bAddNewField" class="btn btn-lg btn-info">Agregar</button>
 		                        </p>
+
 				</div>
 
 			     </div>
